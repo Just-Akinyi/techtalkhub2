@@ -175,6 +175,7 @@ export default function Pricing() {
 
                 {/* CTA */}
                 <button
+                onClick={() => (window.location.href = "/book-class")}
                   className={`mb-6 w-full py-2 rounded-xl font-medium transition ${
                     plan.popular
                       ? "bg-secondary text-white animate-pulse"

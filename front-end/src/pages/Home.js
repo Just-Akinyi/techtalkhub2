@@ -1,8 +1,12 @@
+//T BE FAST
+// window.history.back() which triggers a full page navigation → not smooth.
+// Instead we should use React Router’s useNavigate hook
+
 import React from "react";
 import HeroBackground from "../components/HeroBackground";
 import SliderWidget from "../components/Slider";
 // import AboutPage from "./About";
-// import ProgramsPage from "./Programs";
+import ProgramsPage from "./Programs";
 import FacultyDirectoryPage from "./FacultyDirectory";
 import AdmissionsPage from "./Admissions";
 import TestimonialsPage from "./Testimonials";
@@ -11,6 +15,7 @@ import AppFooter from "../components/Footer";
 import Pricing from "./Pricing";
 import HeroContent from "../components/HeroContent"; // Add this at the top
 import NavBar from "../components/NavBar";
+import StudentProjects from "./StudentProjects";
 
 export default function HomePage() {
   return (
@@ -36,6 +41,12 @@ export default function HomePage() {
           <SliderWidget />
         </div>
       </section>
+        {/* Programs Section */}
+      <section id="programs" className="py-10 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <ProgramsPage />
+        </div>
+      </section>
 
       {/* Pricing Section */}
       <section id="pricing" className="py-10 bg-background">
@@ -51,12 +62,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section id="programs" className="py-10 bg-background">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* <ProgramsPage /> */}
-        </div>
-      </section>
+    
 
       {/* Faculty Section */}
       <section id="faculty" className="py-10 bg-white">
@@ -69,6 +75,13 @@ export default function HomePage() {
       <section id="admissions" className="py-10 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <AdmissionsPage />
+        </div>
+      </section>
+
+        {/* Projects Section */}
+      <section id="about" className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <StudentProjects />
         </div>
       </section>
 
