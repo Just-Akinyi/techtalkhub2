@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 
-// import BookClassPage from "./pages/BookClass";
+import BookClassPage from "./pages/BookClass";
 // import AboutPage from "./pages/About";
-// import ProgramsPage from "./pages/Programs";
+import ProgramsPage from "./pages/Programs";
 import ContactPage from "./pages/Contact";
 import TestimonialsPage from "./pages/Testimonials";
 import LoginPage from "./pages/Login";
@@ -15,6 +15,7 @@ import PaymentFailed from "./pages/payment/PayFail";
 // import EnrollPage from "./pages/EnrollPage";
 import BackToTopButton from "./components/BackToTopButton";
 import ChatButton from "./components/ChatButton";
+import StudentProjects from "./pages/StudentProjects";
 
 function App() {
   return (
@@ -23,9 +24,10 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/book-class" element={<BookClassPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/programs" element={<ProgramsPage />} /> */}
+        <Route path="/book-class" element={<BookClassPage />} />
+        {/* <Route path="/about" element={<AboutPage />} /> */}
+         <Route path="/projects" element={<StudentProjects />} />
+        <Route path="/programs" element={<ProgramsPage />} />
         {/* <Route path="/blog" element={<BlogPage />} /> */}
         <Route path="/testimonials" element={<TestimonialsPage />} />
         <Route path="/contact" element={<ContactPage />} />
