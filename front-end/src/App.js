@@ -1,7 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
+// rm -rf build
 
+// npm cache clean --force
+
+// npm run build
+
+// firebase deploy
 import BookClassPage from "./pages/BookClass";
 // import AboutPage from "./pages/About";
 import ProgramsPage from "./pages/Programs";
@@ -16,6 +22,9 @@ import PaymentFailed from "./pages/payment/PayFail";
 import BackToTopButton from "./components/BackToTopButton";
 import ChatButton from "./components/ChatButton";
 import StudentProjects from "./pages/StudentProjects";
+import NotFoundPage from "./components/NotFoundPage";
+import SuccessPage from "./utils/success";
+import ErrorPage from "./utils/error";
 
 function App() {
   return (
@@ -36,6 +45,9 @@ function App() {
         {/* <Route path="/enroll" element={<EnrollPage />} /> */}
         <Route path="/payment-success" element={<PaymentSuccess />} />
         <Route path="/payment-failed" element={<PaymentFailed />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="/error" element={<ErrorPage />} />
       </Routes>
 
      {/* Back to Top Button outside Routes */}
