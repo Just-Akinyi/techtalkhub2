@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "website",
+      "public": "website/build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "admin",
+      "public": "admin/build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "playground",
+      "public": "playground/build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ]
+}
