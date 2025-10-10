@@ -13,6 +13,7 @@ import TrialDetailsPage from "./pages/TrialDetails";
 import EmployeesPage from "./pages/Employees";
 import SubscribersPage from "./pages/Subscribers";
 import AdminCalendar from "./pages/AdminCalendar";
+import Payments from "./pages/Payments"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin/employees" element={<EmployeesPage />} />
           <Route path="/admin/trials" element={<TrialDetailsPage />} />
           <Route path="/admin/calendar" element={<AdminCalendar />} />
+          <Route path="/admin/payments" element={<Payments />} />
 
         </Routes>
       </div>

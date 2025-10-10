@@ -9,7 +9,8 @@ import {
   FaAngleDoubleRight,
   FaChalkboardTeacher,
   FaUserFriends,
-  FaCalendarAlt
+  FaCalendarAlt,
+  FaMoneyBillWave
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -24,7 +25,7 @@ export default function Sidebar() {
     { name: "Subscribers", icon: <FaUserFriends />, link: "/admin/subscribers" },
     { name: "Employees", icon: <FaChalkboardTeacher/>, link: "/admin/employees" },
     { name: "Calendar", icon: <FaCalendarAlt />, link: "/admin/calendar" },
-
+  { name: "Payments", icon: <FaMoneyBillWave />, link: "/admin/payments" },
     { name: "Analytics", icon: <FaChartBar />, link: "#" },
     { name: "Settings", icon: <FaCog />, link: "#" },
     { name: "Logout", icon: <FaSignOutAlt />, link: "#" },
