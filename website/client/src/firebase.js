@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "REMOVED",
+  apiKey: "AIzaSyBvkomr1-qVjsqM0vNPG2X13jvZVJR5QRY",
   authDomain: "tech-talk-hub.firebaseapp.com",
   projectId: "tech-talk-hub",
   // storageBucket: "tech-talk-hub.firebasestorage.app",

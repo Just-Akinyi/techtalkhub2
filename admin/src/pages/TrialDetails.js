@@ -40,10 +40,12 @@ export default function TrialDetailsPage() {
     switch (status) {
       case "paid":
         return { color: "bg-green-500", tooltip: "Paid client" };
+      case "attended":
+        return { color: "bg-blue-500", tooltip: "Attended (attended)" };
       case "no-show":
         return { color: "bg-red-500", tooltip: "No show (didn't attend)" };
       default:
-        return { color: "bg-yellow-400", tooltip: "New lead (not booked)" };
+        return { color: "bg-purple-400", tooltip: "New lead (booked)" };
     }
   };
 
@@ -63,7 +65,7 @@ export default function TrialDetailsPage() {
               <th className="py-3 px-4 text-left">Email</th>
               <th className="py-3 px-4 text-left">WhatsApp</th>
               <th className="py-3 px-4 text-left">Date</th>
-              <th className="py-3 px-4 text-left">Time</th>
+              <th className="py-3 px-4 text-left">Time(in admin timezone)</th>
               <th className="py-3 px-4 text-left">Country</th>
               <th className="py-3 px-4 text-left">Status</th>
             </tr>
