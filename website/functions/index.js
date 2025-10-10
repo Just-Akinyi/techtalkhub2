@@ -1,16 +1,17 @@
 const functions = require("firebase-functions");
-const axios = require("axios");
 const admin = require("firebase-admin");
-const cors = require("cors")({ origin: "*" }); // ✅ explicitly allows all
-
+const axios = require("axios");
+const cors = require("cors")({ origin: "*" }); // Allow all origins
 
 admin.initializeApp();
 const db = admin.firestore();
 
+// Use the secret from environment variables
+const SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
+
 exports.verifyPayment = functions.https.onRequest((req, res) => {
-  cors(req, res, async () => { // ✅ wrap everything inside CORS
+  cors(req, res, async () => {
     const { reference, studentName } = req.body;
-    const SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
 
     if (!reference) {
       return res
@@ -21,7 +22,9 @@ exports.verifyPayment = functions.https.onRequest((req, res) => {
     try {
       const response = await axios.get(
         `https://api.paystack.co/transaction/verify/${reference}`,
-        { headers: { Authorization: `Bearer ${SECRET_KEY}` } }
+        {
+          headers: { Authorization: `Bearer ${SECRET_KEY}` },
+        }
       );
 
       const transaction = response.data.data;

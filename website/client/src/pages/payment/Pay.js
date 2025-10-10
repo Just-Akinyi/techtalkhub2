@@ -18,7 +18,7 @@ export default function PaystackButton() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState(null);
 
-  const PUBLIC_KEY = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY|| "pk_test_xxxxxxxxxxxxx"; ;
+  const PUBLIC_KEY = process.env.REACT_APP_PAYSTACK_PUBLIC_KEY ;
 useEffect(() => {
   if (!window.PaystackPop) {
     const script = document.createElement("script");
